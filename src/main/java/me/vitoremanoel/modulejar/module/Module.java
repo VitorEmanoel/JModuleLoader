@@ -1,7 +1,22 @@
 package me.vitoremanoel.modulejar.module;
 
-public interface Module {
+public class Module implements IModule {
 
-    void onEnable();
-    void onDisable();
+
+
+
+    @Override
+    public void start() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
+
+    @Override
+    public void load() {
+
+    }
 }
