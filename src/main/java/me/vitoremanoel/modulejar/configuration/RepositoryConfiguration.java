@@ -1,25 +1,9 @@
 package me.vitoremanoel.modulejar.configuration;
 
-public class RepositoryConfiguration implements IRepositoryConfiguration {
 
-    private RepositoryMode mode;
-    private String path;
+public interface RepositoryConfiguration {
 
-    public IRepositoryConfiguration setMode(RepositoryMode mode) {
-        this.mode = mode;
-        return this;
-    }
+    RepositoryConfiguration setMode(RepositoryMode mode);
+    RepositoryConfiguration setRepository(String path);
 
-    public IRepositoryConfiguration setRepository(String path) {
-        this.path = path;
-        return this;
-    }
-
-    public String getPath(){
-        return this.path;
-    }
-
-    public RepositoryMode getMode(){
-        return this.mode;
-    }
 }

@@ -7,13 +7,13 @@ public class RepositoryTest extends ModuleRepository {
 
     public static void main(String[] args){
         RepositoryTest repository = new RepositoryTest();
-        repository.initRepository();
+        repository.init(args);
     }
 
     public RepositoryTest(){
         super.setRepositoryConfiguration($ -> {
             $.setMode(RepositoryMode.LOCAL);
-            $.setRepository("./plugins");
+            $.setRepository("plugins");
         });
         super.getDependencyManager().registerDependency(RepositoryTest.class, this);
     }
