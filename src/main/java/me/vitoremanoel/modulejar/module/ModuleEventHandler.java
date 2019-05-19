@@ -14,7 +14,7 @@ public class ModuleEventHandler {
         return this.handlerClass;
     }
 
-    public Object getHandlerObject(){
+    public Object getHandlerObject() {
         return this.handlerObject;
     }
 }

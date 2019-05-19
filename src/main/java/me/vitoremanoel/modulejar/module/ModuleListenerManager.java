@@ -15,11 +15,11 @@ public class ModuleListenerManager {
         return this.eventHandlers;
     }
 
-    public void registerModuleEventHandler(ModuleEventHandler event){
+    public void registerModuleEventHandler(ModuleEventHandler event) {
         this.eventHandlers.add(event);
     }
 
-    public void call(Event event){
+    public void call(Event event) {
         try {
             for (ModuleEventHandler eventHandler : this.eventHandlers) {
                 for (Method method : eventHandler.getHandlerClass().getMethods()) {
@@ -29,9 +29,7 @@ public class ModuleListenerManager {
                     method.invoke(eventHandler.getHandlerObject(), event);
                 }
             }
-        }catch(IllegalAccessException e){
-
-        }catch (InvocationTargetException e){
+        } catch (IllegalAccessException | InvocationTargetException ignored) {
 
         }
     }
