@@ -14,7 +14,7 @@ public class ModuleTest {
     private Logger logger;
 
     @Listener
-    public void event(OnModuleInit e){
+    public void event(OnModuleInit e) {
 
     }
 

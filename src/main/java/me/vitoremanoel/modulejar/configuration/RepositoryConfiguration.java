@@ -1,9 +1,13 @@
 package me.vitoremanoel.modulejar.configuration;
 
-
 public interface RepositoryConfiguration {
 
+    RepositoryMode getMode();
+
     RepositoryConfiguration setMode(RepositoryMode mode);
-    RepositoryConfiguration setRepository(String path);
+
+    String getDirectory();
+
+    RepositoryConfiguration setDirectory(String path);
 
 }
