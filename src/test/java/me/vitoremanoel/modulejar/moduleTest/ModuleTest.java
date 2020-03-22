@@ -15,7 +15,7 @@ public class ModuleTest {
 
     @Listener
     public void event(OnModuleInit e){
-
+        System.out.println("Hello world");
     }
 
 }

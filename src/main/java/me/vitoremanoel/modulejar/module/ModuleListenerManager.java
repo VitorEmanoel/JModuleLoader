@@ -23,16 +23,14 @@ public class ModuleListenerManager {
         try {
             for (ModuleEventHandler eventHandler : this.eventHandlers) {
                 for (Method method : eventHandler.getHandlerClass().getMethods()) {
-                    if (!method.isAnnotationPresent(Listener.class)) return;
-                    if (method.getParameterCount() != 1) return;
-                    if (!(method.getParameterTypes()[0].equals(event.getClass()))) return;
+                    if (!method.isAnnotationPresent(Listener.class)) continue;
+                    if (method.getParameterCount() != 1) continue;
+                    if (!(method.getParameterTypes()[0].equals(event.getClass()))) continue;
                     method.invoke(eventHandler.getHandlerObject(), event);
                 }
             }
-        }catch(IllegalAccessException e){
-
-        }catch (InvocationTargetException e){
-
+        }catch(IllegalAccessException | InvocationTargetException e){
+            e.printStackTrace();
         }
     }
 

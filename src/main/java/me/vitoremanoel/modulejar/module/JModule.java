@@ -41,7 +41,7 @@ public class JModule {
     protected void loadModuleDependecy() {
         for(Field field : this.mainClass.getDeclaredFields()){
             if(!field.isAnnotationPresent(Inject.class)) return;
-            if(field.getType() != JModule.class) return;
+            if(field.getType() != JModule.class) continue;
             try {
                 field.setAccessible(true);
                 field.set(this.mainObject, this);

@@ -25,7 +25,6 @@ public class DependencyManager extends LinkedHashMap<Class<?>, Object> {
         if(this.getDependency(field.getType()) == null) return;
         if(classObject == null) return;
         field.set(classObject, this.getDependency(field.getType()));
-
     }
 
 }
