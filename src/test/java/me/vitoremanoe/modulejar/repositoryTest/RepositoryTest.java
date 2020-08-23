@@ -1,7 +1,7 @@
 package me.vitoremanoe.modulejar.repositoryTest;
 
-import me.vitoremanoel.modulejar.configuration.RepositoryMode;
-import me.vitoremanoel.modulejar.repository.ModuleRepository;
+import me.vitoremanoel.jmoduleloader.configuration.RepositoryMode;
+import me.vitoremanoel.jmoduleloader.repository.ModuleRepository;
 
 import java.net.MalformedURLException;
 import java.net.URL;
